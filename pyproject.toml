@@ -1,0 +1,20 @@
+[project]
+name = "desenvolvimento-web-django"
+version = "0.1.0"
+description = ""
+authors = [{ name = "FilipeMadeira13", email = "cfilipemadeira@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["django (>=5.2,<6.0)", "dj-database-url", "psycopg2-binary", "whitenoise[brotli]", "gunicorn"]
+
+
+[tool.poetry.group.dev.dependencies]
+ipython = "*"
+pytest-django = "*"
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "mysite.settings"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
