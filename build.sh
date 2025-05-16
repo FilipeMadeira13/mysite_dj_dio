@@ -1,7 +1,9 @@
+pip install --upgrade pip
+
 set -o errexit
 
 pip install poetry -U
-poetry install --no-root --without-dev
+poetry install --only main
 
 python manage.py collectstatic --noinput
 
